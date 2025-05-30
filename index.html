@@ -2,21 +2,96 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>goroのYouTubeページ</title>
+  <title>Dr.GoroのYouTube</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 60px;  /* ヘッダーの高さぶん余白 */
+      padding-bottom: 60px; /* フッターの高さぶん余白 */
+    }
+
+    /* ヘッダー */
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      z-index: 1000;
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      text-decoration: underline;
+    }
+
+    /* フッター */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      background-color: red;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    iframe {
+      margin-top: 20px;
+    }
+  </style>
 </head>
-<body style="text-align: center;">
+<body>
+
+  <!-- ヘッダー -->
+  <div class="header">
+    <a href="#about">自己紹介</a>
+    <a href="#videos">動画一覧</a>
+    <a href="https://twitter.com/your_username" target="_blank">SNS</a>
+  </div>
+
+  <!-- メイン -->
   <h1>Dr.GoroのYouTubeへようこそ！</h1>
-  <h2>語呂合わせを使った新しいタイプの講義動画です。ワイン、精神科、絵画、音楽、漢方、狩猟、様々なジャンルがあります。</h2>
-  <p>こちらから動画をご覧ください👇</p>
- <iframe width="560" height="315"
-  src="https://www.youtube.com/embed/qsUP54AXL6E?si=YrVpt4JAppbF9aRf"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin"
-  allowfullscreen>
-</iframe>
-  <br>
-  <a href="https://www.youtube.com/@dr.56-" target="_blank">チャンネル登録はこちら</a>
+
+  <h2 id="about">語呂合わせを使った新しいタイプの講義動画です。</h2>
+
+  <p id="videos">こちらから動画をご覧ください👇</p>
+  <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/qsUP54AXL6E?si=YrVpt4JAppbF9aRf"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+  <!-- フッター -->
+  <div class="footer">
+    <a href="https://www.youtube.com/@dr.56-" target="_blank">
+      ✅ チャンネル登録はこちら
+    </a>
+  </div>
+
 </body>
 </html>
